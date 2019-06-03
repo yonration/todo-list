@@ -22,7 +22,7 @@ export let addTodo = form => async (dispatch, getState) => {
 }
 export let deleteTodo = id => async dispatch => {
   dispatch({type: REQUEST_START})
-  let res = await axios.delete(`/todos/${id}`)
+  await axios.delete(`/todos/${id}`)
   dispatch({
     type: DELETE_TODO,
     id

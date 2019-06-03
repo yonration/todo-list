@@ -2,8 +2,8 @@ import { connect } from 'react-redux'
 import Tips from '../components/Tips'
 function mapState(state) {
   return {
-    isShow: state.todos.isFetching,
-    status: state.todos.isFetching ? 0 : 1
+    isShow: state.sign.isLoading,
+    status: state.sign.status
   }
 }
 export default connect(mapState)(Tips)
